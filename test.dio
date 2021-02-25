@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2021-02-25T02:33:59.543Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_1) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.53.2 Chrome/87.0.4280.141 Electron/11.2.1 Safari/537.36" version="14.2.4" etag="3tZB6pp2N-LVGEvJcwxg" type="embed">
+<mxfile host="65bd71144e" modified="2021-02-25T05:27:37.211Z" agent="5.0 (Macintosh; Intel Mac OS X 11_0_1) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.53.2 Chrome/87.0.4280.141 Electron/11.2.1 Safari/537.36" version="14.2.4" etag="wzjH55Nl3Do9z-XqYzfw" type="embed">
     <diagram id="tHPi34Hejlq9sddVmBy8" name="ページ1">
-        <mxGraphModel dx="939" dy="606" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="882" dy="847" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -9,8 +9,11 @@
                         <mxPoint x="590" y="215" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.583;entryY=-0.019;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="2" target="16">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
                 <mxCell id="2" value="users teable&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;id&lt;/li&gt;&lt;li&gt;password&lt;/li&gt;&lt;li&gt;email&lt;/li&gt;&lt;li&gt;name&lt;/li&gt;&lt;li&gt;nickname&lt;/li&gt;&lt;li&gt;住所&lt;/li&gt;&lt;li&gt;user_info&lt;/li&gt;&lt;/ul&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="75" y="130" width="275" height="190" as="geometry"/>
+                    <mxGeometry x="75" y="150" width="275" height="190" as="geometry"/>
                 </mxCell>
                 <mxCell id="8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="5" target="6">
                     <mxGeometry relative="1" as="geometry"/>
@@ -39,6 +42,32 @@
                 </mxCell>
                 <mxCell id="7" value="comment&lt;br&gt;&lt;ul&gt;&lt;li&gt;room&lt;/li&gt;&lt;li&gt;text&lt;/li&gt;&lt;li&gt;user_nickname&lt;/li&gt;&lt;/ul&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;align=center;" vertex="1" parent="1">
                     <mxGeometry x="10" y="450" width="240" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="14">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="610" y="700" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" value="購入履歴テーブル&lt;br&gt;&lt;ul&gt;&lt;li&gt;　&lt;/li&gt;&lt;/ul&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="800" width="230" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="15" target="6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="15" target="14">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="商品テーブル" style="whiteSpace=wrap;html=1;aspect=fixed;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="597.5" y="880" width="170" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0.993;entryY=0.82;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="16" target="14">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="16" target="15">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="購入者情報テーブル" style="whiteSpace=wrap;html=1;aspect=fixed;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="360" y="980" width="160" height="160" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
