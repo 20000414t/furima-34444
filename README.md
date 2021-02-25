@@ -1,24 +1,63 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+##users テーブル
 
-* Ruby version
+| Column   | Type   | Options     |
+| -------- | ------ | ----------- |
+| name     | string | null: false |
+| email    | string | null: false |
+| password | string | null: false |
+| nickname | string |null: false  |
+| 住所      | string | null: false |
+| user_info| string | null: false |
 
-* System dependencies
+### Association
 
-* Configuration
+- has_many :items
+- has_many :buys
+- has_many :comments
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
+##商品出品機能テーブル(items)
 
-* Services (job queues, cache servers, search engines, etc.)
+| Column   | Type   | Options     |
+| -------- | ------ | ----------- |
+| item     | text   | null: false |
+| items_id | text   | null: false |
+| image    | text   | null: false |
+| item_info| text   |null: false  |
+| saler_id | string | null: false |
+| price    | text   | null: false |
 
-* Deployment instructions
+### Association
 
-* ...
+- has_many :comments
+- has_many :buys
+- has_many :users
+
+
+##商品購入テーブル(buys)
+| Column   | Type   | Options     |
+| -------- | ------ | ----------- |
+| buyer_id | string | null: false |
+
+### Association
+
+- belongs_to :comments
+- belongs_to :user
+- belongs_to :items
+
+##comment
+
+| Column   | Type   | Options     |
+| -------- | ------ | ----------- |
+| content  | text   | null: false |
+| user     | string | null: false |
+| room     | references  |null: false  |
+
+### Association
+
+- belongs_to :items
+- belongs_to :user
