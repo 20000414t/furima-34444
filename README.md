@@ -29,7 +29,7 @@
 | info     | text   |null: false  |
 | user | reference | foreign_key: true |
 | price    | integer| null: false |
-| item_status| text |null: false  |
+| item_status_id| integer |null: false  |
 | delivary_id | integer | null: false |
 | area_id     | integer| null: false |
 | day_time_id | integer| null: false|
@@ -44,7 +44,7 @@
 ##商品購入テーブル(buys)
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
-| buyer | references | foreign_key: true |
+| user | references | foreign_key: true |
 | product  | references  |foreign_key: true  |
 
 ### Association
@@ -70,9 +70,14 @@
 
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
+| user     | reference | foreign_key: true |
+| streetadores | text   | null: false |
+
+##購入履歴テーブル
+
+| Column   | Type   | Options     |
+| -------- | ------ | ----------- |
 | item     | text   | null: false |
 | image    | text   | null: false |
 | item_info| text   |null: false  |
-| user     | reference | foreign_key: true |
 | price    | text   | null: false |
-| streetadores | text   | null: false |
