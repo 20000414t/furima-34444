@@ -26,8 +26,8 @@
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
 | name     | text   | null: false |
-| info| text   |null: false  　　　|
-| saler_id | string | foreign_key: true |
+| info     | text   |null: false  |
+| user | reference | foreign_key: true |
 | price    | integer| null: false |
 | item_status| text |null: false  |
 | delivary_id | integer | null: false |
@@ -71,9 +71,8 @@
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
 | item     | text   | null: false |
-| items_id | text   | null: false |
 | image    | text   | null: false |
 | item_info| text   |null: false  |
-| saler_id | string | null: false |
+| user     | reference | foreign_key: true |
 | price    | text   | null: false |
 | streetadores | text   | null: false |
