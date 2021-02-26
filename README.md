@@ -26,9 +26,9 @@
 
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
-| name     | string   | null: false |
+| name     | string | null: false |
 | info     | text   |null: false  |
-| user | reference | foreign_key: true |
+| user 　　 | reference | foreign_key: true |
 | price    | integer| null: false |
 | item_status_id| integer |null: false  |
 | delivary_id | integer | null: false |
@@ -42,7 +42,7 @@
 - belongs_to :user
 
 
-##商品購入テーブル(buys)
+##商品購入テーブル(orders)
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
 | user     | references | foreign_key: true |
@@ -53,7 +53,7 @@
 - 
 - belongs_to :user
 - belongs_to :item
-- has_many   :history
+- has_one   :history
 
 ##comment
 
@@ -68,15 +68,18 @@
 - belongs_to :item
 - belongs_to :user
 
-##購入者情報テーブル(history)
+##購入者情報テーブル(addresses)
 
 | Column          | Type     | Options     |
 | --------        | ------   | ----------- |
 | prefectures_id  | integer  | null: false | #都道府県#
-| streetadores_id | string   | null: false | #住所#
-| postalcode_id   | string   | null: false | #郵便番号#
-| cities_id       | text     | null: false | #市町村#
-| buildname       | string   | null: true  | #建物の名前#
+| streetadores    | string   | null: false | #住所#
+| postalcode      | string   | null: false | #郵便番号#
+| cities          | string   | null: false | #市町村#
+| buildname       | string   | null        | #建物の名前#
 | phonenamber     | string   | null: false | #電話番号#
+| user_id  | references  | foreign_key: true |
 
--  belongs_to :buys
+-  belongs_to :buy
+
+
