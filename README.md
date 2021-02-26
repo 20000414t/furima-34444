@@ -28,11 +28,11 @@
 | -------- | ------ | ----------- |
 | name     | string | null: false |
 | info     | text   |null: false  |
-| user 　　 | reference | foreign_key: true |
+| user 　　 | references | foreign_key: true |
 | price    | integer| null: false |
 | item_status_id| integer |null: false  |
 | delivary_id | integer | null: false |
-| area_id     | integer| null: false |
+| prefectures_id| integer| null: false |
 | day_time_id | integer| null: false|
 | delivary_price_id | integer | null: false|
 ### Association
@@ -78,7 +78,7 @@
 | cities          | string   | null: false | #市町村#
 | buildname       | string   | null        | #建物の名前#
 | phonenamber     | string   | null: false | #電話番号#
-| user_id  | references  | foreign_key: true |
+| order           | references  | foreign_key: true |
 
 -  belongs_to :buy
 
