@@ -18,7 +18,7 @@
 - has_many :items
 - has_many :buys
 - has_many :comments
-- has_many :history
+
 
 
 
@@ -38,21 +38,22 @@
 ### Association
 
 - has_many :comments
-- has_one :buys
+- has_one :buy
 - belongs_to :user
 
 
 ##商品購入テーブル(buys)
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
-| user_id | references | foreign_key: true |
-| item_id | references  |foreign_key: true  |
+| user     | references | foreign_key: true |
+| item     | references  |foreign_key: true  |
 
 ### Association
 
 - 
 - belongs_to :user
 - belongs_to :item
+- has_many   :history
 
 ##comment
 
@@ -69,14 +70,13 @@
 
 ##購入者情報テーブル(history)
 
-| Column   | Type   | Options     |
-| -------- | ------ | ----------- |
-| user_id  | reference | foreign_key: true |
-| streetadores_id | integer   | null: false |
-| postalcode_id | integer   | null: false |
-| cities_id   | text   | null: false |
-| buildname | text   | null: true |
-| phonenamber | text   | null: false |
+| Column          | Type     | Options     |
+| --------        | ------   | ----------- |
+| prefectures_id  | integer  | null: false | #都道府県#
+| streetadores_id | string   | null: false | #住所#
+| postalcode_id   | string   | null: false | #郵便番号#
+| cities_id       | text     | null: false | #市町村#
+| buildname       | string   | null: true  | #建物の名前#
+| phonenamber     | string   | null: false | #電話番号#
 
-- belongs_to :user
-- 
+-  belongs_to :buys
