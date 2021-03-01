@@ -19,5 +19,8 @@ class User < ApplicationRecord
            validates :name_first_kana,
          format: {
            with:/[\p{katakana} ー－&&[^ -~｡-ﾟ]]+/}
+           validates :birthday
+           validates :name
+           }
          end
 end
