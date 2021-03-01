@@ -21,6 +21,6 @@ class User < ApplicationRecord
            with:/[\p{katakana} ー－&&[^ -~｡-ﾟ]]+/}
            validates :birthday
            validates :name
-           }
+           
          end
 end
