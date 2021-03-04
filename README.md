@@ -28,13 +28,14 @@
 | -------- | ------ | ----------- |
 | name     | string | null: false |
 | info     | text   |null: false  |
-| user 　　 | references | foreign_key: true |
+| user     | references | foreign_key: true |
 | price    | integer| null: false |
 | item_status_id| integer |null: false  |
-| delivary_id | integer | null: false |
+| category_id | integer | null: false |
 | prefectures_id| integer| null: false |
 | day_time_id | integer| null: false|
 | delivary_price_id | integer | null: false|
+
 ### Association
 
 - has_many :comments
