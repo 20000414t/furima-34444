@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_action :move_to_login, only: [:new]
   def index
     @items = Item.all
   end
@@ -12,7 +13,7 @@ class ItemsController < ApplicationController
     if @items.save
       redirect_to root_path
     else
-      render :root_path
+      render :new_item_path
     end
   end
 
@@ -20,4 +21,13 @@ class ItemsController < ApplicationController
   def items_params
     params.require(:item).permit(:name, :price, :item_status_id, :prefectures_id, :day_time_id, :delivary_price_id,:image, :category_id, :prefectures_id, :info).merge(user_id: current_user.id)
   end
+
+
+  def move_to_login
+    unless user_signed_in?
+      redirect_to new_user_session_path
+    end
+  end
+
+
 end
