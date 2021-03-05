@@ -4,6 +4,7 @@ class Item < ApplicationRecord
   has_one :buy
 
   with_options presence: true do
+    validates :name
     validates :image
     validates :info
     validates :category_id
@@ -12,11 +13,8 @@ class Item < ApplicationRecord
     validates :prefectures_id
     validates :day_time_id
     validates :price,
-    format: {
-      with: 300 =< price && price =< 9999999}
-    validates :price,
-      format: {
-        with: /^[0-9]+$/}
+    numericality: { only_integer: true },
+    numericality: {greater_than: 300,less_than: 9999999} 
   end
   
 end
