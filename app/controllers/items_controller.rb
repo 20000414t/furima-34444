@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :move_to_login, only: [:new]
+  before_action :authenticate_user!, only: [:new]
   def index
     @items = Item.all
   end
@@ -13,7 +13,7 @@ class ItemsController < ApplicationController
     if @items.save
       redirect_to root_path
     else
-      render :new_item_path
+      render :new
     end
   end
 
@@ -23,11 +23,7 @@ class ItemsController < ApplicationController
   end
 
 
-  def move_to_login
-    unless user_signed_in?
-      redirect_to new_user_session_path
-    end
-  end
+  
 
 
 end

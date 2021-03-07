@@ -8,6 +8,8 @@ window.addEventListener('load', () => {
     const addTaxDom = document.getElementById("add-tax-price");
     addTaxDom.innerHTML = inputValue * 0.1
     const profit = document.getElementById("profit");
+    value = Math.floor(profit.innerHTML);
+  console.log( "Math.floor", value );
     profit.innerHTML =  priceInput.value - inputValue * 0.1
   })
 });
