@@ -8,3 +8,4 @@ window.addEventListener('load', () => {
     profit.innerHTML =  Math.floor(inputValue - inputValue * 0.1)
   })
 });
+
