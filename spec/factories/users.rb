@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :user do
     name                      {'test'}
-    email                     {'test@test'}
+    email                     {'test@test00'}
     password                  {'testtest1'}
     password_confirmation     {'testtest1'}
     name_family               {'山田'}
@@ -10,4 +10,5 @@ FactoryBot.define do
     name_first_kana           {'タロウ'}
     birthday                  {'2000-01-01'}
   end
+ 
 end
