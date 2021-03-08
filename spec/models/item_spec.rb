@@ -59,6 +59,31 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include("Price can't be blank")
       end
+
+      it 'priceが全角だと登録できない'
+      @item.price = '１１１'
+      @item.valid?
+      expect(@item.errors.full_messages).to include("Price can't be invalid")
+      end
+
+        it '数字以外で混じっていると登録できない'
+        @item.price = ''
+        @item.valid?
+        expect(@item.errors.full_messages).to include("Price can't be blank")
+      end
+
+      it '300円未満では登録できない'
+      @item.price = ''
+      @item.valid?
+      expect(@item.errors.full_messages).to include("Price can't be less than 300")
+      end
+
+      it '9999999円以上だと登録できない'
+      @item.price = ''
+      @item.valid?
+      expect(@item.errors.full_messages).to include("Price can't be greater than 9999999")
+      end
+
     end 
   end
 end
