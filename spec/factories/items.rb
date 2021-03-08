@@ -3,7 +3,7 @@ FactoryBot.define do
     association :user
     name              {'こんにちは'}
     info              {'こんばんは'}
-    price             {'1234'}
+    price             {1234}
     item_status_id    {1}
     prefectures_id    {2}
     day_time_id       {1}
