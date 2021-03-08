@@ -40,7 +40,7 @@
 
 - has_many :comments
 - has_one :buy
-- belongs_to :user
+- belongs_to :order
 
 
 ##商品購入テーブル(orders)
@@ -81,6 +81,6 @@
 | phonenamber     | string   | null: false | #電話番号#
 | order           | references  | foreign_key: true |
 
--  belongs_to :buy
+-  belongs_to :order
 
 
