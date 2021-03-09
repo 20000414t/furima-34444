@@ -32,8 +32,8 @@
 | price    | integer| null: false |
 | item_status_id| integer |null: false  |
 | category_id | integer | null: false |
-| prefectures_id| integer| null: false |
-| day_time_id | integer| null: false|
+| prefecture_id| integer| null: false |
+| delivary_date_id| integer| null: false|
 | delivary_price_id | integer | null: false|
 
 ### Association
@@ -73,7 +73,7 @@
 
 | Column          | Type     | Options     |
 | --------        | ------   | ----------- |
-| prefectures_id  | integer  | null: false | #都道府県#
+| prefecture_id  | integer  | null: false | #都道府県#
 | streetadores    | string   | null: false | #住所#
 | postalcode      | string   | null: false | #郵便番号#
 | cities          | string   | null: false | #市町村#

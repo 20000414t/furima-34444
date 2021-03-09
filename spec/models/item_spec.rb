@@ -43,13 +43,13 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include("Delivary price must be other than 0")
       end
-      it 'prefectures_idが0では登録できない' do
-        @item.prefectures_id = 0
+      it 'prefecture_idが0では登録できない' do
+        @item.prefecture_id = 0
         @item.valid?
-        expect(@item.errors.full_messages).to include("Prefectures must be other than 0")
+        expect(@item.errors.full_messages).to include("Prefecture must be other than 0")
       end
-      it 'day_time_idが0では登録できない' do
-        @item.day_time_id = 0
+      it 'delivary_date_idが0では登録できない' do
+        @item.delivary_date_id = 0
         @item.valid?
         expect(@item.errors.full_messages).to include("Day time must be other than 0")
       end

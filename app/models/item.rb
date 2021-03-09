@@ -2,9 +2,9 @@ class Item < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :prefecture
   belongs_to :category
-  belongs_to :itemStatus
-  belongs_to :delivaryDate
-  belongs_to :delivaryPrice
+  belongs_to :item_status
+  belongs_to :delivary_date
+  belongs_to :delivary_price
   #belongs_to :
   
 
@@ -25,9 +25,9 @@ class Item < ApplicationRecord
       
       validates :delivary_price_id
       
-      validates :prefectures_id
+      validates :prefecture_id
       
-      validates :day_time_id
+      validates :delivary_date_id
     end
     validates :price,
     numericality: { only_integer: true },
