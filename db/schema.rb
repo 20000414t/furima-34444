@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2021_03_03_081445) do
   end
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "prefectures_id", null: false
+    t.integer "prefecture_id", null: false
     t.string "streetadoress", null: false
     t.string "postalcade", null: false
     t.string "cities", null: false
@@ -53,8 +53,8 @@ ActiveRecord::Schema.define(version: 2021_03_03_081445) do
     t.integer "category_id", null: false
     t.integer "price", null: false
     t.integer "item_status_id", null: false
-    t.integer "prefectures_id", null: false
-    t.integer "day_time_id", null: false
+    t.integer "prefecture_id", null: false
+    t.integer "delivary_date_id", null: false
     t.integer "delivary_price_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
