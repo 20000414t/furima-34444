@@ -25,11 +25,12 @@ before_action :item_define, only: [:create]
   private
   
   def order_params
-    params.require(:order_address).permit(:streetadoress, :postalcade, :cities, :buildname, :order_id, :prefectures_id, :phonename).merge(user_id: current_user.id,  token: params[:token], item_id: @items.id)
+    params.require(:order_address).permit(:streetadoress, :postalcade, :cities, :buildname, :prefectures_id, :phonename).merge(user_id: current_user.id,  token: params[:token], item_id: @items.id)
   end
   
   def pay_item
     Payjp.api_key = ENV["PAYJP_SECRET_KEY" ]
+    
     Payjp::Charge.create(
      
       :amount => @items.price,  
