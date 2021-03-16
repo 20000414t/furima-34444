@@ -8,7 +8,7 @@ FactoryBot.define do
     streetadoress    {'123'}
     buildname        {'123'}
     phonename        {'123'}
-    user_id           {1}
-    item_id          {1}
   end
+
+  
 end

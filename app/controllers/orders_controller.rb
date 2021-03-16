@@ -1,10 +1,9 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!, only: [:index]
-before_action :item_define, only: [:create]
+before_action :item_define, only: [:create, :index]
 before_action :move_to_index, only: [:index]
 
   def index
-    @items = Item.find(params[:item_id])
     @order_address = OrderAddress.new
   end
 
