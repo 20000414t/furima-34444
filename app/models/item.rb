@@ -5,8 +5,8 @@ class Item < ApplicationRecord
   belongs_to :item_status
   belongs_to :delivary_date
   belongs_to :delivary_price
-  belongs_to :order
-  belongs_to :address
+  # belongs_to :order
+  # belongs_to :address
   
 
 
