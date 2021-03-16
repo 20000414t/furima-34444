@@ -14,7 +14,6 @@ before_action :item_define, only: [:create]
     
       if @order_address.valid?
         pay_item
-        # priceは@itemから取得する
         @order_address.save
        redirect_to root_path
       else
@@ -32,7 +31,6 @@ before_action :item_define, only: [:create]
     Payjp.api_key = ENV["PAYJP_SECRET_KEY" ]
     
     Payjp::Charge.create(
-     
       :amount => @items.price,  
       card: order_params[:token],    
       currency: 'jpy'                
