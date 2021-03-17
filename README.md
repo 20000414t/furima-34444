@@ -16,7 +16,7 @@
 ### Association
 
 - has_many :items
-- has_many :buys
+- has_many :orders
 - has_many :comments
 
 
@@ -39,7 +39,7 @@
 ### Association
 
 - has_many :comments
-- has_one :buy
+- has_one :order
 - belongs_to :order
 
 
