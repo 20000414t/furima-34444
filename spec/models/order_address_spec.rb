@@ -64,15 +64,15 @@ RSpec.describe OrderAddress, type: :model do
     end
 
     it "電話番号は12桁以上では購入できないこと" do
-      @order.phonename = '123456789012356'
+      @order.phonename = '123456789012'
       @order.valid?
-      expect(@order.errors.full_messages).to include("Phonename is too long (maximum is 12 characters)")
+      expect(@order.errors.full_messages).to include("Phonename is too long (maximum is 11 characters)")
     end
 
     it "電話番号は英数混合では購入できないこと" do
       @order.phonename = '1235689gfgyfy'
       @order.valid?
-      expect(@order.errors.full_messages).to include("Phonename is not a number", "Phonename is too long (maximum is 12 characters)")
+      expect(@order.errors.full_messages).to include("Phonename is not a number", "Phonename is too long (maximum is 11 characters)")
     end
 
     it "user_idが空だと購入できないこと" do

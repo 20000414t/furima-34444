@@ -11,7 +11,7 @@ class OrderAddress
     numericality: {other_than: 0}
     validates :cities
     validates :streetadoress
-    validates :phonename, numericality: {only_number: true}, length: { maximum: 12 }
+    validates :phonename, numericality: {only_number: true}, length: { maximum: 11 }
     validates :item_id
   end
   def save

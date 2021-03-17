@@ -5,7 +5,6 @@ root :to => 'items#index'
 resources :items do
   resources :orders
 end
-resources :addresses
 end
 
 #ルーティングのネストをする（どの商品に対する購入ページなのかを判別するため）
