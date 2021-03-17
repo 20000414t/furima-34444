@@ -50,7 +50,7 @@ before_action :move_to_index, only: [:index]
   end
 
   def sold_out
-      if user_signed_in? && !@items.order.nil?
+      if  !@items.order.nil?
        redirect_to root_path
       end
    end
