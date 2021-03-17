@@ -2,14 +2,12 @@ class OrdersController < ApplicationController
   before_action :authenticate_user!, only: [:index]
 before_action :item_define, only: [:create, :index]
 before_action :move_to_index, only: [:index]
+ before_action :sold_out,       only: [:index]
 
   def index
     @order_address = OrderAddress.new
   end
 
-  def new
-    @order_address = OrderAddress.new
-  end
 
   def create
     @order_address = OrderAddress.new(order_params)
@@ -43,11 +41,18 @@ before_action :move_to_index, only: [:index]
     @items = Item.find(params[:item_id])
   end
 
+ 
+
    def move_to_index
-    @items = Item.find(params[:item_id])
-   if user_id = @items.user_id
+   if current_user.id == @items.user_id
        redirect_to root_path
      end
   end
+
+  def sold_out
+      if user_signed_in? && !@items.order.nil?
+       redirect_to root_path
+      end
+   end
 end
 

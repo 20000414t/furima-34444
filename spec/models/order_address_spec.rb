@@ -13,6 +13,11 @@ RSpec.describe OrderAddress, type: :model do
     it "全ての情報があれば保存ができること" do
       expect(@order).to be_valid
     end
+
+    it "buildnameが空でも登録できること" do
+      @order.buildname = ""
+      expect(@order).to be_valid
+    end
   end
  
   context 'ユーザー登録ができない時' do
